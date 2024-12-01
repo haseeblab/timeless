@@ -102,15 +102,15 @@ html {
   
   /* Custom Image Backgrounds for Each Card */
   .card:nth-child(1) {
-    background-image: url('tech.1.jpg'); /* Technology Image */
+    background-image: url('../images/tech.1.jpg'); /* Technology Image */
   }
   
   .card:nth-child(2) {
-    background-image: url('card.2.webp'); /* Business Image */
+    background-image: url('../images/card.2.webp'); /* Business Image */
   }
   
   .card:nth-child(3) {
-    background-image: url('card\ 3.avif'); /* Nature Image */
+    background-image: url('../images/card 3.avif'); /* Nature Image */
   }
   
   /* Hover Effect */

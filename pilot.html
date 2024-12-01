@@ -3,57 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js" type="text/javascript" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="philippe.css" />
-    <link rel="stylesheet" href="pilot.css" />
+    <link rel="stylesheet" href="css/philippe.css" />
+    <link rel="stylesheet" href="css/pilot.css" />
     <title>Document</title>
   </head>
   <body class="bg-gray-900">
-    <!-- nav -->
-    <header class="text-gray-400 bg-black body-font">
-      <div
-        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
-      >
-        <a
-          class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
-        >
-          <div
-            class="w-20 h-20 text-white p-2 rounded-full overflow-hidden bg-transparent"
-          >
-            <img
-              src="image-removebg-preview (6).png"
-              alt="Logo"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <span class="ml-3 text-xl">Timeless Elegance</span>
-        </a>
-        <nav
-          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
-        >
-          <a href="index.html" class="mr-5 hover:text-white">Home</a>
-          <a href="index.html" class="mr-5 hover:text-white">Shop</a>
-          <a class="mr-5 hover:text-white">About Us</a>
-          <a class="mr-5 hover:text-white">Contact</a>
-        </nav>
-        <button
-          class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-black rounded text-base mt-4 md:mt-0"
-        >
-          Button
-          <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            class="w-4 h-4 ml-1"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </button>
-      </div>
-    </header>
+  
     <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
       <div class="container px-5 py-24 mx-auto">
         <div class="lg:w-4/5 mx-auto flex flex-wrap">
@@ -63,7 +20,7 @@
               id="carouselImage"
               alt="ecommerce"
               class="lg:w-full lg:h-[500px] w-full object-cover object-center rounded"
-              src="IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp"
+              src="images/IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp"
             />
 
             <!-- Left Arrow -->
@@ -280,10 +237,10 @@
     <script>
       // Image change logic
       const images = [
-        "IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp", // First image
-        "iwc.2.jpg", // Second image
-        "iwc.3.webp", // Third image
-        "iwc.4.jpg", // Fourth image
+        "images/IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp", // First image
+        "images/iwc.2.jpg", // Second image
+        "images/iwc.3.webp", // Third image
+        "images/iwc.4.jpg", // Fourth image
       ];
 
       let currentImageIndex = 0;
@@ -342,14 +299,14 @@
           <!-- Image 0 -->
           <a href="index.html">
             <div class="image-wrapper">
-              <img src="home image.webp" alt="Seiko Watch" />
+              <img src="images/home image.webp" alt="Seiko Watch" />
             </div>
           </a>
 
           <!-- Image 1 -->
           <a href="seiko.html">
             <div class="image-wrapper">
-              <img src="Seiko.jpg" alt="Seiko Watch" />
+              <img src="images/Seiko.jpg" alt="Seiko Watch" />
             </div>
           </a>
 
@@ -357,7 +314,7 @@
           <a href="rolex.html">
             <div class="image-wrapper">
               <img
-                src="Rolex-Submariner-Black-Watches_1024x1024.webp"
+                src="images/Rolex-Submariner-Black-Watches_1024x1024.webp"
                 alt="Rolex Watch"
               />
             </div>
@@ -367,7 +324,7 @@
           <a href="reverso.html">
             <div class="image-wrapper">
               <img
-                src="Jaeger-LeCoultre-Reverso-Tribute-Duo.jpg"
+                src="images/Jaeger-LeCoultre-Reverso-Tribute-Duo.jpg"
                 alt="Reverso Watch"
               />
             </div>
@@ -376,14 +333,14 @@
           <!-- Image 4 -->
           <a href="Cartier Tank.html">
             <div class="image-wrapper">
-              <img src="CARtier.jpg" alt="Cartier Tank" />
+              <img src="images/CARtier.jpg" alt="Cartier Tank" />
             </div>
           </a>
 
           <!-- Image 5 -->
           <a href="philippe.html">
             <div class="image-wrapper">
-              <img src="Paket Philliphen.jpg" alt="Patek Philippe" />
+              <img src="images/Paket Philliphen.jpg" alt="Patek Philippe" />
             </div>
           </a>
 
@@ -391,7 +348,7 @@
           <a href="omega.html">
             <div class="image-wrapper">
               <img
-                src="Omega-Speedmaster-6-Things-Magazin-2-1.webp"
+                src="images/Omega-Speedmaster-6-Things-Magazin-2-1.webp"
                 alt="Omega Speedmaster"
               />
             </div>
@@ -401,7 +358,7 @@
           <a href="tag heuer.html">
             <div class="image-wrapper">
               <img
-                src="13-TAG-Heuer-WW-2023-mobile-image.jpg"
+                src="images/13-TAG-Heuer-WW-2023-mobile-image.jpg"
                 alt="Tag Heuer"
               />
             </div>
@@ -410,14 +367,14 @@
           <!-- Image 8 -->
           <a href="Octo.html">
             <div class="image-wrapper">
-              <img src="Bvlgari.webp" alt="Bvlgari Octo" />
+              <img src="images/Bvlgari.webp" alt="Bvlgari Octo" />
             </div>
           </a>
 
           <!-- Image 9 -->
           <a href="Navitimer.html">
             <div class="image-wrapper">
-              <img src="breitling.jpg" alt="Breitling Navitimer" />
+              <img src="images/breitling.jpg" alt="Breitling Navitimer" />
             </div>
           </a>
 
@@ -425,7 +382,7 @@
           <a href="Vacheron.html">
             <div class="image-wrapper">
               <img
-                src="Vacheron-Patrimony-blue-pink-gold.jpg"
+                src="images/Vacheron-Patrimony-blue-pink-gold.jpg"
                 alt="Vacheron Constantin"
               />
             </div>
@@ -435,7 +392,7 @@
           <a href="pilot.html">
             <div class="image-wrapper">
               <img
-                src="IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp"
+                src="images/IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp"
                 alt="IWC Pilot"
               />
             </div>
