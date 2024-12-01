@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Order Form</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .loading {
+    display: none; /* Ensure hidden by default */
+
+}
+
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(bg2.jpg);
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        /* Order Form Container */
+        .order-form-container {
+            background: rgba(44, 62, 80, 0.9);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* Title */
+        .form-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #f39c12;
+        }
+
+        /* Form Group */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #ecf0f1;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            display: none;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #f39c12;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #f57d14;
+        }
+
+        /* Cancel Button */
+        .cancel-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #e74c3c;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cancel-btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Loading Spinner (Centered) */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dim the background */
+            z-index: 1000; /* To make sure it's above other content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* 3D Spinner */
+        .spinner {
+            width: 70.4px;
+            height: 70.4px;
+            --clr: rgb(247, 197, 159);
+            --clr-alpha: rgb(247, 197, 159, .1);
+            animation: spinner 1.6s infinite ease;
+            transform-style: preserve-3d;
+        }
+
+        .spinner > div {
+            background-color: var(--clr-alpha);
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            border: 3.5px solid var(--clr);
+        }
+
+        .spinner div:nth-of-type(1) {
+            transform: translateZ(-35.2px) rotateY(180deg);
+        }
+
+        .spinner div:nth-of-type(2) {
+            transform: rotateY(-270deg) translateX(50%);
+            transform-origin: top right;
+        }
+
+        .spinner div:nth-of-type(3) {
+            transform: rotateY(270deg) translateX(-50%);
+            transform-origin: center left;
+        }
+
+        .spinner div:nth-of-type(4) {
+            transform: rotateX(90deg) translateY(-50%);
+            transform-origin: top center;
+        }
+
+        .spinner div:nth-of-type(5) {
+            transform: rotateX(-90deg) translateY(50%);
+            transform-origin: bottom center;
+        }
+
+        .spinner div:nth-of-type(6) {
+            transform: translateZ(35.2px);
+        }
+
+        @keyframes spinner {
+            0% {
+                transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+            }
+
+            50% {
+                transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+            }
+
+            100% {
+                transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+            }
+        }
+
+        .loading-text {
+            color: #fff;
+            font-size: 18px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+   /* Thank You Message */
+.thank-you-message {
+    display: none;
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.8); /* Transparent black */
+    backdrop-filter: blur(8px); /* Blur effect */
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease-out;
+}
+
+.thank-you-message h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f39c12; /* Orange title */
+}
+
+.thank-you-message p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Button Styles */
+.thank-you-message .home-link {
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    background: #f39c12; /* Orange background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.thank-you-message .home-link:hover {
+    background: #e67e22; /* Slightly darker orange on hover */
+    color: black;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -60%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Order Form Section -->
+    <div class="order-form-container">
+        <h2 class="form-title">Place Your Order</h2>
+        <form id="orderForm" class="order-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                <span class="error-message" id="nameError">Name is required.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                <span class="error-message" id="emailError">Email is required.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Shipping Address</label>
+                <textarea id="address" name="address" required placeholder="Enter your shipping address"></textarea>
+                <span class="error-message" id="addressError">Address is required.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="orderDetails">Order Details</label>
+                <textarea id="orderDetails" name="orderDetails" required placeholder="Provide details of your order"></textarea>
+                <span class="error-message" id="orderDetailsError">Order details are required.</span>
+            </div>
+
+            <button type="submit" class="submit-btn">Place Order</button>
+          <a href="bas.html"> <button   type="button" class="cancel-btn" id="cancelBtn">Cancel Order</button></a> 
+        </form>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading">
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="loading-text">Processing your order...</div>
+    </div>
+
+    <div id="thankYouMessage" class="thank-you-message">
+        <h3>Thank You!</h3>
+        <p>Your order has been successfully placed. We appreciate your business!</p>
+        <a href="bas.html" class="home-link">Return to Home</a>
+    </div>
+    
+
+    <script>
+        // Ensure loader is hidden initially
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('loading').style.display = 'none'; // Hide loader on page load
+        });
+    
+        // Handle form submission
+        document.getElementById('orderForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+    
+            // Reset error messages
+            document.querySelectorAll('.error-message').forEach(function (error) {
+                error.style.display = 'none';
+            });
+    
+            // Show loading spinner on Place Order button click
+            document.getElementById('loading').style.display = 'flex';
+    
+            // Simulate loader for 3 seconds
+            setTimeout(function () {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('thankYouMessage').style.display = 'block';
+            }, 3000); // Loader will show for 3 seconds
+        });
+    
+        // Cancel button functionality
+        document.getElementById('cancelBtn').addEventListener('click', function () {
+            document.getElementById('orderForm').reset();
+            document.getElementById('thankYouMessage').style.display = 'none';
+        });
+    </script>
+    
+</body>
+</html>

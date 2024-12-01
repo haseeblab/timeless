@@ -1,0 +1,181 @@
+/* Styling for the price and alignment */
+a{
+    lighting-color: #ff5733;
+}
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sale-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #44ff33;  /* Bright green color for the sale price */
+    margin-right: 10px;  /* Space between sale price and original price */
+    position: relative;
+  }
+  
+  .original-price {
+    font-size: 1.5rem;  /* Make the original price smaller */
+    font-weight: bold;
+    text-decoration: line-through;  /* Adds the strikethrough */
+    color: #ff5733;  /* Red color for the original price */
+    margin-left: 10px;  /* Space between original and sale price */
+    position: relative;
+  }
+  
+  /* Styling for the button */
+  .butto {
+    height: 2.8em;
+    width: 9em;
+    background: transparent;
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+    border: 2px solid #016dd9;
+    outline: none;
+    color: #016dd9;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 1rem;  /* Space between prices and the button */
+  }
+  
+  .butto:hover {
+    background: #016dd9;
+    color: #ffffff;
+    animation: squeeze3124 0.9s both;
+  }
+  
+  @keyframes squeeze3124 {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  /* Carousel Bullets */
+  .carousel-bullets {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .bullet:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Image fade effect */
+  .carousel-container img {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+
+
+
+
+  /* Image fade effect */
+  .carousel-container img {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+/* Section with Image Scrolling */
+.image-scroll-section {
+    background-color: #1a202c; /* Dark background */
+    padding-top: 4rem; /* Move section higher */
+    padding-bottom: 4rem;
+    overflow: hidden; /* Hide overflow to keep images within container */
+}
+
+.image-scroll-container {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll 20s linear infinite; /* Auto-scroll animation */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-wrapper {
+    flex-shrink: 0;
+    width: 250px; /* Image width */
+    height: 250px; /* Image height */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out; /* Smooth scaling */
+}
+
+/* Hover effect for images */
+.image-wrapper img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Pause scrolling when hovering over images */
+.image-scroll-container:hover {
+    animation-play-state: paused; /* Pause the animation on hover */
+}
+
+/* Animation for continuous scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Scroll left to right */
+    }
+}
+
+/* Title of the Section */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+/* Smooth scrolling for the page */
+html {
+    scroll-behavior: smooth;
+}

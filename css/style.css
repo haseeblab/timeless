@@ -1,0 +1,189 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* From Uiverse.io by Allyhere */ 
+.btn-donate {
+    --clr-font-main: hsla(0 0% 20% / 100);
+    --btn-bg-1: rgb(242, 255, 0);
+    --btn-bg-2: rgb(243, 175, 4);
+    --btn-bg-color: hsla(360 100% 100% / 1);
+    --radii: 0.5em;
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: var(--size, 1rem);
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(
+      325deg,
+      var(--btn-bg-2) 0%,
+      var(--btn-bg-1) 55%,
+      var(--btn-bg-2) 90%
+    );
+    border: none;
+    border-radius: var(--radii);
+    color: var(--btn-bg-color);
+    box-shadow:
+      0px 0px 20px rgba(178, 117, 3, 0.5),
+      0px 5px 5px -1px rgba(233, 216, 58, 0.25),
+      inset 4px 4px 8px rgba(255, 236, 175, 0.5),
+      inset -4px -4px 8px rgba(216, 157, 19, 0.35);
+  }
+  
+  .btn-donate:hover {
+    background-position: right top;
+  }
+  
+  .btn-donate:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow:
+      0 0 0 3px var(--btn-bg-color),
+      0 0 0 6px var(--btn-bg-2);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .btn-donate {
+      transition: linear;
+    }
+  }
+
+
+/* General Card Styling */
+.card {
+    position: relative;
+    width: 350px; /* Fixed width */
+    height: 350px; /* Fixed height */
+    background-size: cover; /* Makes the background image cover the entire box */
+    background-position: center;
+    border-radius: 15px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s ease;
+    margin-bottom: 30px; /* Space between cards */
+  }
+  
+  /* Card Content Styling */
+  .card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dull transparent black background */
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.6s ease;
+  }
+  
+  .card:hover .card__content {
+    opacity: 1;
+  }
+  
+  .card__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card__description {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.4;
+  }
+  
+  /* Custom Image Backgrounds for Each Card */
+  .card:nth-child(1) {
+    background-image: url('tech.1.jpg'); /* Technology Image */
+  }
+  
+  .card:nth-child(2) {
+    background-image: url('card.2.webp'); /* Business Image */
+  }
+  
+  .card:nth-child(3) {
+    background-image: url('card\ 3.avif'); /* Nature Image */
+  }
+  
+  /* Hover Effect */
+  .card:hover {
+    transform: scale(1.1) rotate(5deg); /* Light rotation effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card:hover .card__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05); /* Smooth scaling effect on hover */
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    /* Flex container for cards should stack vertically */
+    .flex {
+      flex-direction: column; /* Stack cards vertically */
+      align-items: center; /* Center cards horizontally */
+      gap: 20px; /* Space between stacked cards */
+    }
+  
+    /* Ensure cards are stacked and do not resize */
+    .card {
+      width: 350px; /* Keep the fixed width */
+      height: 350px; /* Keep the fixed height */
+      display: block; /* Ensure cards are displayed */
+      margin: 10px 0; /* Add some margin between stacked cards */
+    }
+  
+    /* Fix any potential overflow issue */
+    .card__content {
+      padding: 15px; /* Reduced padding for mobile */
+      font-size: 14px; /* Adjust font size for better readability */
+    }
+  }
+
+ /* Thank You Message */
+.thank-you-message {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Dimmed background */
+    backdrop-filter: blur(8px); /* Blur effect */
+    color: white;
+    border-radius: 10px;
+    position: fixed; /* Center on the screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-out, fadeOut 0.5s ease-out 2.5s; /* Appear and disappear */
+  }
+  
+  /* Fade In and Out Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
