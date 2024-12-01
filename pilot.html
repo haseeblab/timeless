@@ -1,309 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="philippe.css">
-    <link rel="stylesheet" href="pilot.css">
+    <link rel="stylesheet" href="philippe.css" />
+    <link rel="stylesheet" href="pilot.css" />
     <title>Document</title>
-</head>
-<body class="bg-gray-900">
-
+  </head>
+  <body class="bg-gray-900">
     <!-- nav -->
     <header class="text-gray-400 bg-black body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-                <div class="w-20 h-20 text-white p-2 rounded-full overflow-hidden bg-transparent">
-                    <img src="image-removebg-preview (6).png" alt="Logo" class="w-full h-full object-cover" />
-                </div>
-                <span class="ml-3 text-xl">Timeless Elegance</span>
-            </a>
-            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                <a href="bas.html" class="mr-5 hover:text-white">Home</a>
-                <a  href="bas.html"  class="mr-5 hover:text-white"  >Shop</a>
-                <a class="mr-5 hover:text-white">About Us</a>
-                <a class="mr-5 hover:text-white">Contact</a>
-            </nav>
-            <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-black rounded text-base mt-4 md:mt-0">Button
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-            </button>
-        </div>
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a
+          class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+        >
+          <div
+            class="w-20 h-20 text-white p-2 rounded-full overflow-hidden bg-transparent"
+          >
+            <img
+              src="image-removebg-preview (6).png"
+              alt="Logo"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <span class="ml-3 text-xl">Timeless Elegance</span>
+        </a>
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a href="index.html" class="mr-5 hover:text-white">Home</a>
+          <a href="index.html" class="mr-5 hover:text-white">Shop</a>
+          <a class="mr-5 hover:text-white">About Us</a>
+          <a class="mr-5 hover:text-white">Contact</a>
+        </nav>
+        <button
+          class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-black rounded text-base mt-4 md:mt-0"
+        >
+          Button
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-4 h-4 ml-1"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
     </header>
     <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-            <!-- Main Image Section -->
-            <div class="relative lg:w-2/3 w-full">
-              <img id="carouselImage" alt="ecommerce" class="lg:w-full lg:h-[500px] w-full object-cover object-center rounded" src="IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp">
-      
-              <!-- Left Arrow -->
-              <button onclick="changeImage(-1)" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
-                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M15 19l-7-7 7-7"></path>
-                </svg>
-              </button>
-              
-              <!-- Right Arrow -->
-              <button onclick="changeImage(1)" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
-                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M9 5l7 7-7 7"></path>
-                </svg>
-              </button>
-      
-              <!-- Image Bullets Section -->
-              <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                <button id="bullet-0" class="bullet bg-orange-500 w-4 h-4 rounded-full transition-transform duration-300" onclick="changeImageByBullet(0)"></button>
-                <button id="bullet-1" class="bullet bg-orange-500 w-4 h-4 rounded-full transition-transform duration-300" onclick="changeImageByBullet(1)"></button>
-                <button id="bullet-2" class="bullet bg-orange-500 w-4 h-4 rounded-full transition-transform duration-300" onclick="changeImageByBullet(2)"></button>
-                <button id="bullet-3" class="bullet bg-orange-500 w-4 h-4 rounded-full transition-transform duration-300" onclick="changeImageByBullet(3)"></button>
-              </div>
+      <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+          <!-- Main Image Section -->
+          <div class="relative lg:w-2/3 w-full">
+            <img
+              id="carouselImage"
+              alt="ecommerce"
+              class="lg:w-full lg:h-[500px] w-full object-cover object-center rounded"
+              src="IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              onclick="changeImage(-1)"
+              class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+            >
+              <svg
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              onclick="changeImage(1)"
+              class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+            >
+              <svg
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+
+            <!-- Image Bullets Section -->
+            <div
+              class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2"
+            >
+              <button
+                id="bullet-0"
+                class="bullet bg-orange-500 w-4 h-4 rounded-full transition-transform duration-300"
+                onclick="changeImageByBullet(0)"
+              ></button>
+              <button
+                id="bullet-1"
+                class="bullet bg-orange-500 w-4 h-4 rounded-full transition-transform duration-300"
+                onclick="changeImageByBullet(1)"
+              ></button>
+              <button
+                id="bullet-2"
+                class="bullet bg-orange-500 w-4 h-4 rounded-full transition-transform duration-300"
+                onclick="changeImageByBullet(2)"
+              ></button>
+              <button
+                id="bullet-3"
+                class="bullet bg-orange-500 w-4 h-4 rounded-full transition-transform duration-300"
+                onclick="changeImageByBullet(3)"
+              ></button>
             </div>
-      
-            <!-- Product Information Section -->
-            <div class="lg:w-1/3 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">IWC Big Pilot</h2>
-              <h1 class="text-white text-3xl title-font font-medium mb-1">IWC Big Pilot</h1>
-      
-              <!-- Ratings (Stars) -->
-              <div class="flex mb-4">
-                <span class="flex items-center">
-                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
-                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
-                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
-                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
-                  <span class="ml-3">4 Reviews</span>
-                </span>
-              </div>
-      
-              <p class="leading-relaxed">
-                The IWC Big Pilot is the quintessential pilot’s watch, featuring a large dial and a power reserve indicator. Its design, inspired by aviation, makes it easy to read under any conditions. Known for its size and functionality, it’s a perfect blend of rugged utility and luxury craftsmanship.
-              </p>
-      
-              <!-- Price and Buttons -->
-              <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5">
-                <!-- Color Selection -->
-                <!-- <div class="flex">
+          </div>
+
+          <!-- Product Information Section -->
+          <div class="lg:w-1/3 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+            <h2 class="text-sm title-font text-gray-500 tracking-widest">
+              IWC Big Pilot
+            </h2>
+            <h1 class="text-white text-3xl title-font font-medium mb-1">
+              IWC Big Pilot
+            </h1>
+
+            <!-- Ratings (Stars) -->
+            <div class="flex mb-4">
+              <span class="flex items-center">
+                <svg
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 text-indigo-400"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  ></path>
+                </svg>
+                <svg
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 text-indigo-400"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  ></path>
+                </svg>
+                <svg
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 text-indigo-400"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  ></path>
+                </svg>
+                <svg
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 text-indigo-400"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  ></path>
+                </svg>
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 text-indigo-400"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  ></path>
+                </svg>
+                <span class="ml-3">4 Reviews</span>
+              </span>
+            </div>
+
+            <p class="leading-relaxed">
+              The IWC Big Pilot is the quintessential pilot’s watch, featuring a
+              large dial and a power reserve indicator. Its design, inspired by
+              aviation, makes it easy to read under any conditions. Known for
+              its size and functionality, it’s a perfect blend of rugged utility
+              and luxury craftsmanship.
+            </p>
+
+            <!-- Price and Buttons -->
+            <div
+              class="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5"
+            >
+              <!-- Color Selection -->
+              <!-- <div class="flex">
                   <span class="mr-3">Color</span>
                   <button class="border-2 border-gray-800 rounded-full w-6 h-6 focus:outline-none"></button>
                   <button class="border-2 border-gray-800 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
                   <button class="border-2 border-gray-800 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
                 </div>
                  -->
-                <!-- Size Selection -->
-                <div class="flex ml-6 items-center">
-                  <span class="mr-3">Size</span>
-                  <div class="relative">
-                    <select class="rounded border border-orange-500 focus:ring-2 focus:ring-orange-500 bg-[black] appearance-none py-2 focus:outline-none focus:border-orange-600 text-white pl-3 pr-10">
-                      <option>SM</option>
-                      <option>M</option>
-                      <option>L</option>
-                      <option>XL</option>
-                    </select>
-                    <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
-                        <path d="M6 9l6 6 6-6"></path>
-                      </svg>
-                    </span>
-                  </div>
+              <!-- Size Selection -->
+              <div class="flex ml-6 items-center">
+                <span class="mr-3">Size</span>
+                <div class="relative">
+                  <select
+                    class="rounded border border-orange-500 focus:ring-2 focus:ring-orange-500 bg-[black] appearance-none py-2 focus:outline-none focus:border-orange-600 text-white pl-3 pr-10"
+                  >
+                    <option>SM</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                  <span
+                    class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center"
+                  >
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-4 h-4"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M6 9l6 6 6-6"></path>
+                    </svg>
+                  </span>
                 </div>
               </div>
-      
-              <!-- Add to Cart Button -->
-              <section class="product-info">
-                <div class="flex items-center justify-center">
-                    <span class="sale-price">$2500</span>
-                  <span class="original-price">$3400</span>
-                 
-                </div>
-              </section>
-              
-              <a href="place order.html">
-                <button class="butto">Place Order</button>
-            </a>
-                            
             </div>
+
+            <!-- Add to Cart Button -->
+            <section class="product-info">
+              <div class="flex items-center justify-center">
+                <span class="sale-price">$2500</span>
+                <span class="original-price">$3400</span>
+              </div>
+            </section>
+
+            <a href="place order.html">
+              <button class="butto">Place Order</button>
+            </a>
           </div>
         </div>
-      </section>
-      
-      <script>
-      
-      
-      
-      
-      
-      
-      
+      </div>
+    </section>
+
+    <script>
       // Image change logic
       const images = [
-        "IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp",  // First image
-        "iwc.2.jpg",          // Second image
-        "iwc.3.webp",          // Third image
-        "iwc.4.jpg"            // Fourth image
+        "IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp", // First image
+        "iwc.2.jpg", // Second image
+        "iwc.3.webp", // Third image
+        "iwc.4.jpg", // Fourth image
       ];
-      
+
       let currentImageIndex = 0;
-      
+
       // Function to change image by arrow navigation
       function changeImage(direction) {
         currentImageIndex += direction;
-      
+
         if (currentImageIndex < 0) currentImageIndex = images.length - 1;
         if (currentImageIndex >= images.length) currentImageIndex = 0;
-      
+
         updateImageAndBullet();
       }
-      
+
       // Function to change image by clicking on bullet
       function changeImageByBullet(index) {
         currentImageIndex = index;
         updateImageAndBullet();
       }
-      
+
       // Update image and bullet styles
       function updateImageAndBullet() {
-        document.getElementById('carouselImage').src = images[currentImageIndex];
-        
+        document.getElementById("carouselImage").src =
+          images[currentImageIndex];
+
         // Remove active class and scaling effect from all bullets
-        const bullets = document.querySelectorAll('.bullet');
-        bullets.forEach(bullet => {
-          bullet.classList.remove('bg-gray-600', 'scale-125');
+        const bullets = document.querySelectorAll(".bullet");
+        bullets.forEach((bullet) => {
+          bullet.classList.remove("bg-gray-600", "scale-125");
         });
-        
+
         // Add active class and scaling effect to the selected bullet
-        const activeBullet = document.getElementById('bullet-' + currentImageIndex);
-        activeBullet.classList.add('bg-gray-600', 'scale-125');
+        const activeBullet = document.getElementById(
+          "bullet-" + currentImageIndex
+        );
+        activeBullet.classList.add("bg-gray-600", "scale-125");
       }
-      </script>
-      
-      <style>
-        .bullet {
-          transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-        .bullet:hover {
-          transform: scale(1.5);
-        }
-        .bullet.scale-125 {
-          transform: scale(1.25);
-        }
-      </style>
-   <!-- Horizontal Image Scroll Section -->
-   <section class="image-scroll-section">
-    <div class="container mx-auto px-4">
+    </script>
+
+    <style>
+      .bullet {
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+      .bullet:hover {
+        transform: scale(1.5);
+      }
+      .bullet.scale-125 {
+        transform: scale(1.25);
+      }
+    </style>
+    <!-- Horizontal Image Scroll Section -->
+    <section class="image-scroll-section">
+      <div class="container mx-auto px-4">
         <h2 class="section-title">Explore Our Collection</h2>
         <div class="image-scroll-container">
-
-
-  <!-- Image 0 -->
-  <a href="bas.html">
-    <div class="image-wrapper">
-        <img src="home image.webp" alt="Seiko Watch">
-    </div>
-</a>
-
+          <!-- Image 0 -->
+          <a href="index.html">
+            <div class="image-wrapper">
+              <img src="home image.webp" alt="Seiko Watch" />
+            </div>
+          </a>
 
           <!-- Image 1 -->
           <a href="seiko.html">
             <div class="image-wrapper">
-                <img src="Seiko.jpg" alt="Seiko Watch">
+              <img src="Seiko.jpg" alt="Seiko Watch" />
             </div>
-        </a>
+          </a>
 
-     
+          <!-- Image 2 -->
+          <a href="rolex.html">
+            <div class="image-wrapper">
+              <img
+                src="Rolex-Submariner-Black-Watches_1024x1024.webp"
+                alt="Rolex Watch"
+              />
+            </div>
+          </a>
 
-            <!-- Image 2 -->
-            <a href="rolex.html">
-                <div class="image-wrapper">
-                    <img src="Rolex-Submariner-Black-Watches_1024x1024.webp" alt="Rolex Watch">
-                </div>
-            </a>
+          <!-- Image 3 -->
+          <a href="reverso.html">
+            <div class="image-wrapper">
+              <img
+                src="Jaeger-LeCoultre-Reverso-Tribute-Duo.jpg"
+                alt="Reverso Watch"
+              />
+            </div>
+          </a>
 
-            <!-- Image 3 -->
-            <a href="reverso.html">
-                <div class="image-wrapper">
-                    <img src="Jaeger-LeCoultre-Reverso-Tribute-Duo.jpg" alt="Reverso Watch">
-                </div>
-            </a>
+          <!-- Image 4 -->
+          <a href="Cartier Tank.html">
+            <div class="image-wrapper">
+              <img src="CARtier.jpg" alt="Cartier Tank" />
+            </div>
+          </a>
 
-            <!-- Image 4 -->
-            <a href="Cartier Tank.html">
-                <div class="image-wrapper">
-                    <img src="CARtier.jpg" alt="Cartier Tank">
-                </div>
-            </a>
+          <!-- Image 5 -->
+          <a href="philippe.html">
+            <div class="image-wrapper">
+              <img src="Paket Philliphen.jpg" alt="Patek Philippe" />
+            </div>
+          </a>
 
-            <!-- Image 5 -->
-            <a href="philippe.html">
-                <div class="image-wrapper">
-                    <img src="Paket Philliphen.jpg" alt="Patek Philippe">
-                </div>
-            </a>
+          <!-- Image 6 -->
+          <a href="omega.html">
+            <div class="image-wrapper">
+              <img
+                src="Omega-Speedmaster-6-Things-Magazin-2-1.webp"
+                alt="Omega Speedmaster"
+              />
+            </div>
+          </a>
 
-            <!-- Image 6 -->
-            <a href="omega.html">
-                <div class="image-wrapper">
-                    <img src="Omega-Speedmaster-6-Things-Magazin-2-1.webp" alt="Omega Speedmaster">
-                </div>
-            </a>
+          <!-- Image 7 -->
+          <a href="tag heuer.html">
+            <div class="image-wrapper">
+              <img
+                src="13-TAG-Heuer-WW-2023-mobile-image.jpg"
+                alt="Tag Heuer"
+              />
+            </div>
+          </a>
 
-            <!-- Image 7 -->
-            <a href="tag heuer.html">
-                <div class="image-wrapper">
-                    <img src="13-TAG-Heuer-WW-2023-mobile-image.jpg" alt="Tag Heuer">
-                </div>
-            </a>
+          <!-- Image 8 -->
+          <a href="Octo.html">
+            <div class="image-wrapper">
+              <img src="Bvlgari.webp" alt="Bvlgari Octo" />
+            </div>
+          </a>
 
-            <!-- Image 8 -->
-            <a href="Octo.html">
-                <div class="image-wrapper">
-                    <img src="Bvlgari.webp" alt="Bvlgari Octo">
-                </div>
-            </a>
+          <!-- Image 9 -->
+          <a href="Navitimer.html">
+            <div class="image-wrapper">
+              <img src="breitling.jpg" alt="Breitling Navitimer" />
+            </div>
+          </a>
 
-            <!-- Image 9 -->
-            <a href="Navitimer.html">
-                <div class="image-wrapper">
-                    <img src="breitling.jpg" alt="Breitling Navitimer">
-                </div>
-            </a>
+          <!-- Image 10 -->
+          <a href="Vacheron.html">
+            <div class="image-wrapper">
+              <img
+                src="Vacheron-Patrimony-blue-pink-gold.jpg"
+                alt="Vacheron Constantin"
+              />
+            </div>
+          </a>
 
-            <!-- Image 10 -->
-            <a href="Vacheron.html">
-                <div class="image-wrapper">
-                    <img src="Vacheron-Patrimony-blue-pink-gold.jpg" alt="Vacheron Constantin">
-                </div>
-            </a>
+          <!-- Image 11 -->
+          <a href="pilot.html">
+            <div class="image-wrapper">
+              <img
+                src="IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp"
+                alt="IWC Pilot"
+              />
+            </div>
+          </a>
 
-            <!-- Image 11 -->
-            <a href="pilot.html">
-                <div class="image-wrapper">
-                    <img src="IWC-Big-Pilots-Watch-43-Racing-Green-IW329306-1.webp" alt="IWC Pilot">
-                </div>
-            </a>
-
-            <!-- Add more images as needed -->
+          <!-- Add more images as needed -->
         </div>
-    </div>
-</section>
-
-
-
-
-    
-      
-</body>
+      </div>
+    </section>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-const header = document.createElement('template');
+const header = document.createElement("template");
 
 header.innerHTML = `
   <header class="text-gray-400 bg-black body-font">
@@ -10,9 +10,9 @@ header.innerHTML = `
                 <span class="ml-3 text-xl">Timeless Elegance</span>
             </a>
             <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                <a href="bas.html" class="mr-5 hover:text-white">Home</a>
-                <a  class="mr-5 hover:text-white"  onclick="scrollToShop()" href="bas.html#shop-now">Shop</a>
-                <a class="mr-5 hover:text-white" onclick="scrollToUs()" href="bas.html#About" >About Us</a>
+                <a href="index.html" class="mr-5 hover:text-white">Home</a>
+                <a  class="mr-5 hover:text-white"  onclick="scrollToShop()" href="index.html#shop-now">Shop</a>
+                <a class="mr-5 hover:text-white" onclick="scrollToUs()" href="index.html#About" >About Us</a>
                 <a class="mr-5 hover:text-white"  onclick="scrollToContact()" href="#Contact" >Contact</a>
             </nav>
          <a href="login.html"> <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-black rounded text-base mt-4 md:mt-0">Login Here
@@ -27,7 +27,6 @@ header.innerHTML = `
 document.body.insertBefore(header.content, document.body.firstChild);
 // document.body.appendChild(header.content);
 // document.body.appendChild(header.content);
-    
 
 // const header = document.getElementById("header-template").content.cloneNode(true);
 // const footer = document.getElementById("footer-template").content.cloneNode(true);
