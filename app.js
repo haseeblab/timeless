@@ -7,7 +7,7 @@ header.innerHTML = `
                 <div class="w-20 h-20 text-white p-2 rounded-full overflow-hidden bg-transparent">
                     <img src="images/image-removebg-preview (6).png" alt="Logo" class="w-full h-full object-cover" />
                 </div>
-                <span class="ml-3 text-xl">Timeless Elegance</span>
+                 <a <span href="index.html" class="ml-3 text-3xl text-white">Timeless Elegance</span></a>  
             </a>
             <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
                 <a href="index.html" class="mr-5 hover:text-white">Home</a>
@@ -23,6 +23,10 @@ header.innerHTML = `
         </div>
     </header>
 `;
+
+
+
+
 
 document.body.insertBefore(header.content, document.body.firstChild);
 // document.body.appendChild(header.content);
